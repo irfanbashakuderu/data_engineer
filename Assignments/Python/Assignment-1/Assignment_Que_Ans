@@ -120,14 +120,22 @@ A. The logical operators and, or and not are also referred to as boolean operato
 
 Q19. What will the output of the following?
 ```
-1 or 0 -> 1
+1 or 0
+
+0 and 0
+
+True and False and True
+
+1 or 0 or 0
+```
+
+A. 1 or 0 -> 1
 
 0 and 0 -> 0
 
 True and False and True -> False
 
 1 or 0 or 0 -> 1
-```
 
 Q20. What are conditional statements in Python?
 
