@@ -143,13 +143,34 @@ A. if -   One or more statements written with the same level of indent will be e
 
 Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
 
+A. age = int(input("Enter age:"))
+if age >= 18:
+    print("I can vote")
+else:
+    print("I can't vote")
+
 Q23. Write a code that displays the sum of all the even numbers from the given list.
 ```
 numbers = [12, 75, 150, 180, 145, 525, 50]
 ```
 
+A. numbers = [12, 75, 150, 180, 145, 525, 50]
+even_numbers_sum = 0
+for num in numbers:
+    if num % 2 == 0:
+        even_numbers_sum += num
+print("Even numbers sum :",even_numbers_sum)
+
 
 Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
+
+A. str_input = input("Enter any 3 numbers with seperated by space:")
+input_numbers_list = str_input.split(" ")
+max_number = 0
+for number in input_numbers_list:
+    if int(number) > max_number:
+        max_number = int(number)
+print("Greatest number: ",max_number)
 
 Q25. Write a program to display only those numbers from a list that satisfy the following conditions
 
@@ -160,3 +181,17 @@ Q25. Write a program to display only those numbers from a list that satisfy the 
 - If the number is greater than 500, then stop the loop
 ```
 numbers = [12, 75, 150, 180, 145, 525, 50]
+
+A. numbers = [12, 75, 150, 180, 145, 525, 50]
+display_numbers = []
+end_of_the_loop = False
+position = 0
+number = 0
+while not end_of_the_loop:
+    number = numbers[position]
+    if number > 500:
+        end_of_the_loop = True
+    if number <= 150 and number % 5 == 0:
+        display_numbers.append(number)
+    position += 1
+print(display_numbers)
